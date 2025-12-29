@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,38 @@
     <link rel="stylesheet" href="style.css">
     <script src="script/script.js" defer></script>
 </head>
+
 <body>
-    <h1>To-Do List</h1>
-    <form>
-        <label for="task">What is your new task?</label>
-        <input type="text" name="task" id="task">
-        <button type="submit" id="create">Create</button>
-    </form>
-    <table id="table"></table>
-    <p id="alert_message"></p>
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+    <main>
+        <!-- create task section -->
+        <section>
+            <label for="task">What is your new task?</label>
+            <input type="text" name="task" id="task">
+            <button type="submit" id="create">Create</button>
+        </section>
+        <!-- filter section -->
+        <section>
+            <label for="filter">Filter: </label>
+            <select name="filter">
+                <option value="all">All</option>
+                <option value="done">Done</option>
+                <option value="undone">Undone</option>
+            </select>
+        </section>
+        <!-- search section -->
+        <section>
+            <label for="search">Search</label>
+            <input type="text" name="search" id="search" placeholder="Task name">
+        </section>
+        <!-- render section -->
+        <section>
+            <table id="table"></table>
+            <p id="alert_message"></p>
+        </section>
+    </main>
 </body>
+
 </html>
