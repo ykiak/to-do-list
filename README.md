@@ -1,17 +1,23 @@
 # To-Do List
-
-To-do list application built with HTML, CSS and vanilla JavaScript.
+To-do list application with JS that allows users to create, edit and delete tasks
 
 ## Features
 - Create tasks
 - Edit tasks
 - Delete tasks
 - Mark tasks as done or undone
+- Persist tasks using browser localStorage
+
+## Technical Decisions
+- Tasks are stored as objects with unique IDs
+- localStorage is used to persist tasks after closing the browser
+- No external libraries to practice DOM manipulation and JS core skills
 
 ## Technologies
-- HTML
-- CSS
-- JavaScript
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- localStorage
 
 ## Status
 This project is under development.
