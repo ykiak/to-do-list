@@ -1,6 +1,7 @@
 label{
     display: block;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 .done{
     text-decoration: line-through;
