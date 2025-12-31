@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/main.css">
     <script src="script/main.js" type="module" defer></script>
 </head>
 
@@ -14,32 +14,44 @@
         <h1>To-Do List</h1>
     </header>
     <main>
-        <!-- create task section -->
-        <section>
-            <label for="task">What is your new task?</label>
-            <input type="text" name="task" id="task">
-            <button type="submit" id="create">Create</button>
-        </section>
-        <!-- filter section -->
-        <section>
-            <label for="filter">Filter: </label>
-            <select name="filter">
-                <option value="all">All</option>
-                <option value="done">Done</option>
-                <option value="undone">Undone</option>
-            </select>
-        </section>
-        <!-- search section -->
-        <section>
-            <label for="search">Search</label>
-            <input type="text" name="search" id="search" placeholder="Task name">
-        </section>
-        <!-- render section -->
-        <section>
-            <table id="table"></table>
-            <p id="alert_message"></p>
-        </section>
+        <div class="inputSpace">
+            <!-- create task section -->
+            <section class="createSection">
+                <label for="task">What is your new task?</label>
+                <input type="text" name="task" id="task">
+                <button type="submit" id="create">Create</button>
+            </section>
+            <!-- search section -->
+            <section class="searchSection">
+                <label for="search">Search</label>
+                <input type="text" name="search" id="search" placeholder="Task name">
+            </section>
+            <!-- filter section -->
+            <section class="filterSection">
+                <label for="filter">Filter: </label>
+                <select name="filter">
+                    <option value="all">All</option>
+                    <option value="done">Done</option>
+                    <option value="undone">Undone</option>
+                </select>
+            </section>
+            <!-- message section -->
+            <section>
+                <p id="alert_message"></p>
+            </section>
+        </div>
+        <div class="renderSpace">
+            <!-- render section -->
+            <section>
+                <table id="table">
+                    <tbody></tbody>
+                </table>
+            </section>
+        </div>
     </main>
+    <footer>
+        <p>Autor: Kaíky Rodrigues</p>
+    </footer>
 </body>
 
 </html>
