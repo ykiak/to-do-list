@@ -17,8 +17,8 @@
         <div class="inputSpace">
             <!-- create task section -->
             <section class="createSection">
-                <label for="task">What is your new task?</label>
-                <input type="text" name="task" id="task">
+                <h2>What is your new task?</h2>
+                <input type="text" name="task" id="task" placeholder="e.g. Go to the gym">
                 <button type="submit" id="create">Create</button>
             </section>
             <!-- search section -->
@@ -28,8 +28,8 @@
             </section>
             <!-- filter section -->
             <section class="filterSection">
-                <label for="filter">Filter: </label>
                 <select name="filter">
+                    <option value="" disabled selected>Filter</option>
                     <option value="all">All</option>
                     <option value="done">Done</option>
                     <option value="undone">Undone</option>
@@ -40,14 +40,14 @@
                 <p id="alert_message"></p>
             </section>
         </div>
-        <div class="renderSpace">
-            <!-- render section -->
-            <section>
-                <table id="table">
-                    <tbody></tbody>
-                </table>
-            </section>
-        </div>
+            <div class="renderSpace">
+                <!-- render section -->
+                <section>
+                    <table id="table">
+                        <tbody></tbody>
+                    </table>
+                </section>
+            </div>
     </main>
     <footer>
         <p>Autor: Kaíky Rodrigues</p>

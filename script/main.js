@@ -4,20 +4,24 @@ import { doneTasks, editTasks, deleteTasks, createTasks } from "./crud.js"
 import { generateId } from "./utils.js"
 import { filterTasks } from "./filters.js"
 import { searchTasks } from "./search.js"
+import { countTasks } from "./counter.js"
 
 const table = document.querySelector("#table")
 
 let taskList = getTasks()
 
 export const handlers = {
-    onSearch(userInput, selectValue){
+    onCount() {
+        return countTasks(taskList)
+    },
+    onSearch(userInput, selectValue) {
         let filteredTaskList = filterTasks(taskList, selectValue)
         let results = searchTasks(filteredTaskList, userInput)
         renderTasks(results, table, handlers)
     },
     onFilter(selectValue) {
-       let filtered = filterTasks(taskList, selectValue)
-       renderTasks(filtered, table, handlers)
+        let filtered = filterTasks(taskList, selectValue)
+        renderTasks(filtered, table, handlers)
     },
     onCreate(taskName) {
         let newTask = {

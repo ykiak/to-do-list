@@ -1,11 +1,138 @@
 /* state */
-.done{
+.done {
     text-decoration: line-through;
+    color: var(--done);
 }
+
+.inforMessage {
+    grid-column: span 2;
+    display: block;
+    text-align: center;
+    color: var(--text-main);
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /* dinamic components */
+.delete,
+.doneB,
+.edit {
+    font-weight: bold;
+}
+
+.delete,
+.doneB,
+.edit:disabled{
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
+}
+
+.delete,
+.doneB {
+    color: white;
+}
+
+.delete {
+    background-color: var(--delete);
+}
+
+.delete:hover {
+    background-color: var(--delete-hover);
+}
+
+.doneB {
+    background-color: var(--done);
+}
+
+.doneB:hover {
+    background-color: var(--done-hover);
+}
+
+.edit {
+    background-color: var(--edit);
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.edit-hover {
+    background-color: var(--edit-hover);
+}
 
 /* static components */
-table{
+table {
     width: 100%;
-    margin-top: 20px;
+    font-size: 20px;
+    margin-top: 80px;
+}
+
+.createSection label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.createSection input {
+    padding: 10px;
+    height: 25px;
+    width: 400px;
+    font-size: 20px;
+}
+
+.createSection button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: white;
+}
+
+.createSection button:hover {
+    background-color: var(--primary-hover);
+}
+
+.searchSection input {
+    padding: 10px;
+    height: 25px;
+    width: 200px;
+    font-size: 20px;
+}
+
+label {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--text-secundary);
+    padding: 10px;
+    height: 45px;
+    font-size: 16px;
+}
+
+input {
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+::placeholder {
+    color: var(--text-secundary);
+}
+
+/* class */
+.inputSpace {
+    background-color: #DCDCDC;
+    padding: 20px;
+}
+
+.renderSpace,
+.inputSpace {
+    background-color: var(--bg-sections);
+    border: 1px solid var(--border)
 }

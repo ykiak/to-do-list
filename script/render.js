@@ -1,12 +1,20 @@
 const submitButton = document.querySelector("#create")
 const inputData = document.querySelector("#task")
-const message = document.querySelector("#alert_message")
 const selectValue = document.querySelector("select")
 const searchInput = document.querySelector("#search")
+const renderSpace = document.querySelector(".renderSpace")
+const inputSpace = document.querySelector(".inputSpace")
+
+const alert_message = document.createElement("p")
+const infor_message = document.createElement("p")
 
 export const renderTasks = (taskList, table, handlers) => {
+    infor_message.textContent = `You have ${handlers.onCount()[0]} tasks, ${handlers.onCount()[1]} completed and ${handlers.onCount()[2]} pending`
+    infor_message.className = "inforMessage" 
+    inputSpace.append(infor_message)
     if (taskList.length === 0) {
-        message.textContent = "No tasks yet"
+        alert_message.textContent = "No tasks yet"
+        renderSpace.append(alert_message)
         table.innerHTML = ""
     } else {
         table.innerHTML = ""
@@ -24,15 +32,18 @@ export const renderTasks = (taskList, table, handlers) => {
 
             //content of cell2
             const doneButton = document.createElement("button")
+            doneButton.className = "doneB"
             doneButton.textContent = task.done ? "UNDONE" : "DONE"
             doneButton.disabled = false
 
             const editButton = document.createElement("button")
+            editButton.className = "edit"
             editButton.textContent = "EDIT"
             editButton.disabled = task.done
             let isEditing = false
 
             const deleteButton = document.createElement("button")
+            deleteButton.className = "delete"
             deleteButton.textContent = "DELETE"
             deleteButton.disabled = false
 
@@ -87,8 +98,8 @@ export const renderTasks = (taskList, table, handlers) => {
             tr.append(cell1, cell2)
             table.append(tr)
 
-            //cleans alert message
-            message.textContent = ""
+            //cleans alert alert_message
+            alert_message.textContent = ""
         })
     }
 }
@@ -98,7 +109,9 @@ export const renderCreateTasks = (handlers) => {
         event.preventDefault()
 
         if (!inputData.value.trim()) {
-            message.textContent = "You must type a name for your task"
+            alert_message.textContent = "You must type a name for your task"
+            renderSpace.append(alert_message)
+            table.innerHTML = ""
         } else {
             handlers.onCreate(inputData.value)
         }

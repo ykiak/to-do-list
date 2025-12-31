@@ -1,18 +1,48 @@
-body{
+body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
-header{
+
+header {
     text-align: center;
 }
-main{
+
+main {
     min-height: 0;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
 }
-.renderSpace{
+
+.inputSpace {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: auto auto;
+}
+
+.renderSpace {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
+}
+
+.inputSpace,
+.renderSpace {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.createSection {
+    grid-column: span 2;
+    place-items: center;
+}
+
+.createSection input {
+    display: block;
+    margin-top: 50px;
+}
+
+.createSection button {
+    display: block;
+    margin-top: 40px;
 }

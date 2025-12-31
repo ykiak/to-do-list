@@ -1,9 +1,31 @@
-html, body{
+html,
+body {
     height: 100%;
     margin: 0;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     overflow: hidden;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+:root {
+    --bg-main: #F8F9FA;
+    --bg-sections: #FFFFFF;
+    --primary: #4F46E5;
+    --primary-hover: #4338CA;
+    --text-main: #111827;
+    --text-secundary: #6B7280;
+    --done: #16A34A;
+    --done-hover: #15803D;
+    --border: #E5E7EB;
+    --delete: #DC2626;
+    --delete-hover: #B91C1C;
+    --edit: #FFD700;
+    --edit-hover: #FFA500;
+    --disabled-bg: #E5E7EB;
+    --disabled-text: #9CA3AF;
 }
