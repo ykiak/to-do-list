@@ -6,6 +6,7 @@ const renderSpace = document.querySelector(".renderSpace")
 const inputSpace = document.querySelector(".inputSpace")
 
 const alert_message = document.createElement("p")
+alert_message.className = "alert_message"
 const infor_message = document.createElement("p")
 
 export const renderTasks = (taskList, table, handlers) => {
@@ -23,6 +24,7 @@ export const renderTasks = (taskList, table, handlers) => {
             //creates a new row for each element
             const tr = document.createElement("tr")
             const cell1 = document.createElement("td")
+            cell1.className = "cell1"
             const cell2 = document.createElement("td")
 
             //content of cell1
@@ -67,6 +69,7 @@ export const renderTasks = (taskList, table, handlers) => {
 
                     let p = parent.querySelector("p")
                     let input = document.createElement("input")
+                    input.className = "dinamicInput"
                     input.type = "text"
                     input.value = p.textContent
 
